@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from tkinter import *
 ablak1 = Tk()
 gyoker = 'C:\\Users\\morelliadamoflavio\\Desktop\\TkInter\\TkInter'
@@ -33,7 +33,7 @@ mezo3.grid(row=2,column=1)
 kep = PhotoImage(file='C:\\Users\\morelliadamoflavio\\Desktop\\cica2.png')
 
 
-=======
+# =======
 from tkinter import *
 ablak1 = Tk()
 gyoker = 'C:\\Users\\morelliadamoflavio\\Desktop\\TkInter\\TkInter'
@@ -68,5 +68,5 @@ mezo3.grid(row=2,column=1)
 kep = PhotoImage(file='C:\\Users\\morelliadamoflavio\\Desktop\\cica2.png')
 
 
->>>>>>> 92f35d2018ee896c3980993570053f5398770970
+# >>>>>>> 92f35d2018ee896c3980993570053f5398770970
 ablak1.mainloop()

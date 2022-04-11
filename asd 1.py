@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-from argparse import Action
-from cgitb import text
-
-from email.mime import image
-from ipaddress import collapse_addresses
-from operator import iconcat
 import tkinter
 from turtle import color
 ablak = tkinter.Tk()
@@ -76,7 +69,6 @@ gomb = tkinter.Button(ablak,
 gomb.grid(row=4,column=4)
 
 
-=======
 
 from argparse import Action
 from cgitb import text
@@ -85,7 +77,7 @@ from email.mime import image
 from ipaddress import collapse_addresses
 from operator import iconcat
 import tkinter
-from turtle import color
+
 ablak = tkinter.Tk()
 ablak.geometry("500x500")
 
@@ -109,12 +101,12 @@ def szamol():
         print("Belefér")
         Belefer+=2
     print(mennyifermegbele,"Liter bor fér még bele")
-    if Belefer == 1:
-        lnem = tkinter.Label(ablak, text="NEM FÉR BELE!",image=amogus)
-        lnem.grid(row=1,column=0)
-    elif Belefer == 2:
-        ligen = tkinter.Label(ablak, text="BELEFÉR!",image=pepsi_bela)
-        ligen.grid(row=1,column=0)
+    # if Belefer == 1:
+    #     lnem = tkinter.Label(ablak, text="NEM FÉR BELE!",image=amogus)
+    #     lnem.grid(row=1,column=0)
+    # elif Belefer == 2:
+    #     ligen = tkinter.Label(ablak, text="BELEFÉR!",image=pepsi_bela)
+    #     ligen.grid(row=1,column=0)
         
     
         
@@ -154,5 +146,4 @@ gomb = tkinter.Button(ablak,
 gomb.grid(row=4,column=4)
 
 
->>>>>>> 92f35d2018ee896c3980993570053f5398770970
 ablak.mainloop()
