@@ -1,5 +1,13 @@
 from tkinter import *
+import time
+lista = []
+karakterek = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+-/:;<=>?@[]^_`{|}~\x0b\x0c'
+for i in karakterek:
+    lista.append(i)
 
+
+
+hibauzenet = "Érvénytelen adat. Írjon be egy 1 és ∞ között levő számot."
 def nevjegy():
     abl2= Toplevel(foablak)
     uz2 = Message(abl2,text ="Készítette: Orsós Józsi\nBaja\n2022.04.11",width = 300)
@@ -25,6 +33,12 @@ def felszin():
         elif b <= 0:
             helytelen()
         elif c <= 0:
+            helytelen()
+        elif type(a) != int:
+            helytelen()
+        elif type(b) != int:
+            helytelen()
+        elif type(c) != int :
             helytelen()
     abl3 = Toplevel(foablak)
     abl3.title("A téglatest felszíne")
@@ -53,6 +67,17 @@ def felszin():
 
 
 def terfogat():
+    def helytelen():
+        mezo1.delete(0,END)
+        mezo2.delete(0,END)
+        mezo3.delete(0,END) 
+        mezo4.delete(0,END)
+        abl4 = Toplevel(abl3)
+        abl4.title("Hibaüzenet")
+        abl4.minsize(width = 100, height = 100)
+        szoveg5 = Label(abl4, text = "ÉRVÉNYTELEN,ADJ MEG POZITÍV SZÁMOT!")
+        szoveg5.pack()
+        abl4.mainloop()
     def szamit():
         a = eval(mezo1.get())
         b = eval(mezo2.get())
@@ -60,7 +85,18 @@ def terfogat():
         terfogat = a*b*c
         mezo4.delete(0,END)
         mezo4.insert(0,str(terfogat))
-        
+        if a <= 0:
+                helytelen()
+        elif b <= 0:
+            helytelen()
+        elif c <= 0:
+            helytelen()
+        elif type(a) != int:
+            helytelen()
+        elif type(b) != int:
+            helytelen()
+        elif type(c) != int:
+            helytelen()
     abl3 = Toplevel(foablak)
     abl3.title("A téglatest térfogata")
     abl3.minsize(width = 300, height = 100)
