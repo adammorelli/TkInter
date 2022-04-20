@@ -1,9 +1,6 @@
 from tkinter import *
 import time
 lista = []
-karakterek = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+-/:;<=>?@[]^_`{|}~\x0b\x0c'
-for i in karakterek:
-    lista.append(i)
 
 
 
@@ -22,6 +19,14 @@ def felszin():
         mezo2.delete(0,END)
         mezo3.delete(0,END) 
         mezo4.delete(0,END)
+        abl7 = Toplevel(abl3)
+        abl7.title("Hibaüzenet")
+        abl7.minsize(width = 100, height = 100)
+        szoveg6 = Label(abl7, text = "ÉRVÉNYTELEN,ADJ MEG POZITÍV SZÁMOT!")
+        szoveg6.pack()
+        abl7.mainloop()
+
+    
     def szamit():
         a = eval(mezo1.get())
         b = eval(mezo2.get())
@@ -34,11 +39,11 @@ def felszin():
             helytelen()
         elif c <= 0:
             helytelen()
-        elif type(a) != int:
-            helytelen()
-        elif type(b) != int:
-            helytelen()
-        elif type(c) != int :
+        # elif a == str:
+        #     helytelen()
+        # elif b == str:
+        #     helytelen()
+        # elif c == str:
             helytelen()
     abl3 = Toplevel(foablak)
     abl3.title("A téglatest felszíne")
@@ -91,11 +96,11 @@ def terfogat():
             helytelen()
         elif c <= 0:
             helytelen()
-        elif type(a) != int:
+        elif a != int or float:
             helytelen()
-        elif type(b) != int:
+        elif b != int or float:
             helytelen()
-        elif type(c) != int:
+        elif c != int or float:
             helytelen()
     abl3 = Toplevel(foablak)
     abl3.title("A téglatest térfogata")
